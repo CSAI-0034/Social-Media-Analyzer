@@ -100,15 +100,6 @@ npm run server
 
 ---
 
-## 📞 Contact
-
-💌 You can send messages directly via the **Contact Us form** inside the app (integrated with Nodemailer).
-
-For queries:
-📧 Email: **[adityapersharma@gmail.com](mailto:anubhavtripathi512.com)**
-
----
-
 ## 🤝 Contributing
 
 Pull requests are welcome! For major changes, open an issue first to discuss what you’d like to change.
