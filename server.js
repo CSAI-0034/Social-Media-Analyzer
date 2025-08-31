@@ -6,7 +6,6 @@ import dotenv from "dotenv";
 
 dotenv.config();
 const API_URL = import.meta.env.VITE_BACKEND_URL;
-
 const app = express();
 app.use(cors());
 app.use(express.json());
