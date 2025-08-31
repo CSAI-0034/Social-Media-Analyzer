@@ -158,171 +158,141 @@ export default function App() {
   };
 
   return (
-    <div className={`min-h-screen ${themeClasses[theme]} transition-colors duration-500`}>
-      {/* ---------- Header ---------- */}
-      <header className="w-full bg-white/10 backdrop-blur-sm py-3 shadow">
-        <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
-          <div className="font-extrabold text-xl">📄 Social Media Content Analyzer</div>
+  <div className={`min-h-screen ${themeClasses[theme]} transition-colors duration-500`}>
+    {/* ---------- Header ---------- */}
+    <header className="w-full bg-gradient-to-r from-purple-700 via-indigo-600 to-pink-600 text-white shadow-lg sticky top-0 z-50">
+      <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="font-extrabold text-2xl">📄 Social Media Content Analyzer</div>
 
-          <div className="flex items-center gap-6">
-            {/* Theme Selector */}
-            <select
-              value={theme}
-              onChange={(e) => setTheme(e.target.value)}
-              className="px-3 py-1 rounded-md text-black"
-            >
-              <option value="gradient">🌈 Gradient</option>
-              <option value="light">🌞 Light</option>
-              <option value="dark">🌙 Dark</option>
-            </select>
+        <div className="flex items-center gap-6">
+          {/* Theme Selector */}
+          <select
+            value={theme}
+            onChange={(e) => setTheme(e.target.value)}
+            className="px-3 py-1 rounded-md bg-white text-black font-semibold"
+          >
+            <option value="gradient">🌈 Gradient</option>
+            <option value="light">🌞 Light</option>
+            <option value="dark">🌙 Dark</option>
+          </select>
 
-            <div className="flex gap-6 text-white/80 text-sm">
-              <a href="#how" className="hover:text-white">How to Use</a>
-              <a href="#faq" className="hover:text-white">FAQ</a>
-              <a href="#contact" className="hover:text-white">Contact</a>
-            </div>
+          <div className="flex gap-6 text-white/90 font-medium text-sm">
+            <a href="#how" className="hover:text-yellow-300 transition">How to Use</a>
+            <a href="#faq" className="hover:text-yellow-300 transition">FAQ</a>
           </div>
         </div>
-      </header>
+      </div>
+    </header>
+
+    {/* ---------- Main Content ---------- */}
+    <main className="max-w-6xl mx-auto px-6 py-12 space-y-12">
 
       {/* ---------- Upload Section ---------- */}
-      <main className="max-w-6xl mx-auto px-6 py-10">
-        <section className="bg-gradient-to-br from-purple-600 to-purple-500 rounded-xl p-10 text-center text-white shadow-xl">
-          <div
-            className="p-10 rounded-md border-2 border-dashed border-white/30 hover:bg-white/5 cursor-pointer"
-            onClick={() => fileInputRef.current.click()}
-          >
-            <UploadCloud size={40} className="mx-auto mb-4" />
-            <h2 className="text-2xl font-bold mb-2">Upload PDF / Image</h2>
-            <p className="opacity-80 mb-4">Drag & drop or click here to choose your file</p>
-            <input
-              ref={fileInputRef}
-              type="file"
-              accept=".pdf,image/*"
-              className="hidden"
-              onChange={(e) => handleFile(e.target.files[0])}
-            />
-          </div>
+      <section className="bg-gradient-to-tr from-pink-500 via-purple-600 to-indigo-700 rounded-2xl p-12 text-center text-white shadow-2xl">
+        <div
+          className="p-12 rounded-2xl border-4 border-dashed border-white/30 hover:bg-white/10 cursor-pointer transition"
+          onClick={() => fileInputRef.current.click()}
+        >
+          <UploadCloud size={48} className="mx-auto mb-5" />
+          <h2 className="text-3xl font-bold mb-3">Upload PDF / Image</h2>
+          <p className="opacity-80 mb-4 text-lg">Drag & drop or click here to choose your file</p>
+          <input
+            ref={fileInputRef}
+            type="file"
+            accept=".pdf,image/*"
+            className="hidden"
+            onChange={(e) => handleFile(e.target.files[0])}
+          />
+        </div>
 
-          {progress && <p className="mt-4">{progress}</p>}
-          {text && (
-            <div className="mt-6 bg-white/20 p-4 rounded-md text-left">
-              <h3 className="font-semibold mb-2">Extracted Text</h3>
-              <div className="max-h-60 overflow-auto bg-white p-3 rounded text-black text-sm">
-                {text}
-              </div>
-              <div className="flex gap-3 mt-3">
-                <button onClick={downloadText} className="flex items-center gap-2 bg-indigo-600 px-4 py-2 rounded-md">
-                  <Download size={16} /> Download
-                </button>
-                <button onClick={() => navigator.clipboard.writeText(text)} className="flex items-center gap-2 bg-slate-200 px-4 py-2 rounded-md text-black">
-                  <Copy size={16} /> Copy
-                </button>
-              </div>
+        {progress && <p className="mt-5 font-semibold text-lg">{progress}</p>}
+
+        {text && (
+          <div className="mt-8 bg-white/20 backdrop-blur-md p-6 rounded-2xl text-left shadow-lg">
+            <h3 className="font-semibold text-xl mb-3">Extracted Text</h3>
+            <div className="max-h-64 overflow-auto bg-white p-4 rounded-lg text-black text-sm shadow-inner">{text}</div>
+            <div className="flex gap-4 mt-4">
+              <button onClick={downloadText} className="flex items-center gap-2 px-5 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-lg transition">
+                <Download size={16} /> Download
+              </button>
+              <button onClick={() => navigator.clipboard.writeText(text)} className="flex items-center gap-2 px-5 py-2 bg-yellow-400 hover:bg-yellow-500 rounded-lg transition text-black">
+                <Copy size={16} /> Copy
+              </button>
             </div>
-          )}
-        </section>
-
-        {/* ---------- AI Tools Section ---------- */}
-        <section className="mt-10 bg-white rounded-xl p-8 shadow text-black">
-          <h3 className="font-bold text-xl mb-4">🤖 AI Tools</h3>
-          <div className="flex gap-4 flex-wrap mb-4">
-            <button onClick={() => handleAI("summary")} className="flex items-center gap-2 px-5 py-2 bg-indigo-600 text-white rounded-md"><FileText size={16} /> Summary</button>
-            <button onClick={() => handleAI("hashtags")} className="flex items-center gap-2 px-5 py-2 bg-emerald-600 text-white rounded-md"><Hash size={16} /> Hashtags</button>
-            <button onClick={() => handleAI("rewrite")} className="flex items-center gap-2 px-5 py-2 bg-yellow-400 text-black rounded-md"><RefreshCcw size={16} /> Rewrite</button>
-            <button onClick={() => handleAI("sentiment")} className="flex items-center gap-2 px-5 py-2 bg-pink-500 text-white rounded-md">Sentiment</button>
-            <button onClick={() => handleAI("engagement")} className="flex items-center gap-2 px-5 py-2 bg-cyan-500 text-white rounded-md">Engagement</button>
           </div>
-          <div className="bg-slate-100 p-4 rounded-md min-h-[150px] text-sm">{loading ? "🤖 Generating AI Response..." : aiResult || "AI output will appear here."}</div>
-        </section>
+        )}
+      </section>
 
-        {/* ---------- How to Use Section ---------- */}
-        <section id="how" className="mt-12 bg-white rounded-xl p-10 shadow text-center text-black">
-          <h3 className="text-3xl font-bold mb-6">📌 How to Use</h3>
-          <div className="grid md:grid-cols-4 gap-6">
-            {[
-              { step: "Step 1", title: "Upload", desc: "Choose PDF or Image file to extract text.", icon: <UploadCloud size={40} className="mx-auto text-indigo-600" /> },
-              { step: "Step 2", title: "Extract", desc: "Our hybrid engine reads text or applies OCR.", icon: <FileText size={40} className="mx-auto text-purple-600" /> },
-              { step: "Step 3", title: "Analyze", desc: "Use AI tools to summarize, rewrite or hashtags.", icon: <RefreshCcw size={40} className="mx-auto text-pink-600" /> },
-              { step: "Step 4", title: "Engage", desc: "Apply AI suggestions to boost your reach.", icon: <Hash size={40} className="mx-auto text-green-600" /> },
-            ].map((c, i) => (
-              <motion.div key={i} initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ delay: i * 0.2 }} className="p-6 bg-slate-50 rounded-xl shadow text-center">
-                <div className="font-bold text-sm text-slate-500">{c.step}</div>
-                {c.icon}
-                <h3 className="font-semibold text-lg mt-3">{c.title}</h3>
-                <p className="text-sm mt-2 text-slate-600">{c.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </section>
-
-        {/* ---------- Contact Us Section ---------- */}
-        <section id="contact" className="mt-12 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl p-10 shadow text-center">
-          <h3 className="text-3xl font-bold mb-6">📞 Contact Us</h3>
-          <form className="grid gap-4 max-w-md mx-auto text-left"
-            onSubmit={async (e) => {
-              e.preventDefault();
-              const name = e.target.name.value;
-              const email = e.target.email.value;
-              const message = e.target.message.value;
-              try {
-                const res = await fetch("http://localhost:5196/api/contact", {
-                  method: "POST",
-                  headers: { "Content-Type": "application/json" },
-                  body: JSON.stringify({ name, email, message }),
-                });
-                const data = await res.json();
-                if (data.success) {
-                  alert("✅ Message sent successfully!");
-                  e.target.reset();
-                } else {
-                  alert("❌ Failed: " + data.error);
-                }
-              } catch (err) {
-                alert("⚠️ Error sending: " + err.message);
-              }
-            }}>
-            <input type="text" name="name" placeholder="Your Name" className="px-4 py-2 rounded-md text-black" required />
-            <input type="email" name="email" placeholder="Your Email" className="px-4 py-2 rounded-md text-black" required />
-            <textarea name="message" placeholder="Your Message" rows="4" className="px-4 py-2 rounded-md text-black" required />
-            <button type="submit" className="flex items-center gap-2 justify-center px-6 py-2 bg-yellow-400 text-black rounded-lg hover:scale-105 transition">
-              <Mail size={18} /> Send Message
-            </button>
-          </form>
-        </section>
-
-        {/* ---------- FAQ Section ---------- */}
-        <motion.section id="faq" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} className="bg-white p-10 rounded-2xl shadow text-black mt-12">
-          <h3 className="text-3xl font-bold mb-8 text-center">❓ Frequently Asked Questions</h3>
-          <div className="space-y-4 max-w-3xl mx-auto">
-            {[
-              { q: "What file types are supported?", a: "PDF (text & scanned), JPG, PNG, WEBP." },
-              { q: "Can it extract scanned PDFs?", a: "Yes, OCR automatically extracts scanned text." },
-              { q: "Is my data safe?", a: "Yes, everything runs locally." },
-              { q: "Do I need an API key?", a: "Yes, set VITE_GEMINI_API_KEY for AI features." },
-              { q: "What languages are supported?", a: "English & Hindi, extendable via Tesseract.js." },
-              { q: "How to improve engagement?", a: "Use AI Engagement tool for CTAs & tips." },
-            ].map((item, i) => (
-              <div key={i} className="border rounded-lg">
-                <button onClick={() => setFaqOpen(faqOpen === i ? null : i)} className="w-full flex justify-between items-center px-4 py-3 text-left">
-                  <span className="font-semibold">{item.q}</span>
-                  <ChevronDown className={`transition-transform ${faqOpen === i ? "rotate-180" : ""}`} />
-                </button>
-                {faqOpen === i && <div className="px-4 pb-3 text-sm text-gray-600">{item.a}</div>}
-              </div>
-            ))}
-          </div>
-        </motion.section>
-
-        {/* ---------- Footer ---------- */}
-        <footer className="mt-12 text-center">
-          <div className="bg-white/20 backdrop-blur-md text-white py-6 rounded-xl">
-            <h4 className="font-bold text-lg">🌐 Social Media Content Analyzer</h4>
-            <p className="text-sm opacity-80">Helping you extract, analyze & improve content</p>
-            <p className="mt-2 text-xs">© {new Date().getFullYear()} All Rights Reserved | Made with ❤️ by <b>Aditya Sharma</b></p>
-          </div>
-        </footer>
-      </main>
+      {/* ---------- AI Tools Section ---------- */}
+      <section className="bg-white/10 backdrop-blur-md rounded-2xl p-10 shadow-xl text-black">
+        <h3 className="text-2xl font-bold mb-6">🤖 AI Tools</h3>
+        <div className="flex flex-wrap gap-4 mb-6 justify-center">
+          <button onClick={() => handleAI("summary")} className="flex items-center gap-2 px-5 py-2 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition"><FileText size={16} /> Summary</button>
+          <button onClick={() => handleAI("hashtags")} className="flex items-center gap-2 px-5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg transition"><Hash size={16} /> Hashtags</button>
+          <button onClick={() => handleAI("rewrite")} className="flex items-center gap-2 px-5 py-2 bg-yellow-400 hover:bg-yellow-500 text-black rounded-lg transition"><RefreshCcw size={16} /> Rewrite</button>
+          <button onClick={() => handleAI("sentiment")} className="flex items-center gap-2 px-5 py-2 bg-pink-500 hover:bg-pink-600 text-white rounded-lg transition">Sentiment</button>
+          <button onClick={() => handleAI("engagement")} className="flex items-center gap-2 px-5 py-2 bg-cyan-500 hover:bg-cyan-600 text-white rounded-lg transition">Engagement</button>
+        </div>
+        <div className="bg-white/30 backdrop-blur-sm p-6 rounded-2xl min-h-[150px] text-sm shadow-inner">{loading ? "🤖 Generating AI Response..." : aiResult || "AI output will appear here."}</div>
+      </section>
+      {/* ---------- How to Use Section ---------- */}
+      <section id="how" className="bg-gradient-to-r from-rose-50 to-yellow-50 rounded-3xl p-12 shadow-2xl text-center">
+      <h3 className="text-3xl font-extrabold mb-10 text-rose-600">🚀 Get Started in 4 Easy Steps</h3>
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {[
+        { step: "1", title: "Upload Files", desc: "Select your PDFs or images to extract content seamlessly.", icon: <UploadCloud size={48} className="mx-auto text-rose-500" /> },
+        { step: "2", title: "Automatic Extraction", desc: "Our smart engine reads text or uses OCR for scanned files.", icon: <FileText size={48} className="mx-auto text-yellow-500" /> },
+        { step: "3", title: "AI-Powered Analysis", desc: "Leverage AI tools to summarize, generate hashtags, or rewrite content.", icon: <RefreshCcw size={48} className="mx-auto text-green-500" /> },
+        { step: "4", title: "Boost Engagement", desc: "Apply AI suggestions to make your posts more engaging and reach wider audience.", icon: <Hash size={48} className="mx-auto text-blue-500" /> },
+      ].map((item, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ delay: i * 0.15 }}
+          className="p-8 bg-white/70 hover:bg-white/90 hover:scale-105 transition-transform rounded-3xl shadow-lg flex flex-col items-center text-center"
+        >
+          <div className="text-sm font-semibold text-gray-500 mb-2">{`Step ${item.step}`}</div>
+          {item.icon}
+          <h4 className="font-bold text-lg mt-4 text-gray-800">{item.title}</h4>
+          <p className="text-gray-600 text-sm mt-2">{item.desc}</p>
+        </motion.div>
+      ))}
     </div>
-  );
+    </section>
+
+      {/* ---------- FAQ Section ---------- */}
+      <motion.section id="faq" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} className="bg-white/20 backdrop-blur-md p-10 rounded-2xl shadow-xl text-black">
+        <h3 className="text-3xl font-bold mb-8 text-center">❓ FAQs</h3>
+        <div className="space-y-4 max-w-3xl mx-auto">
+          {[
+              { q: "Can I upload multiple files at once?", a: "Yes, you can upload multiple PDFs or images for batch processing." },
+              { q: "Does it recognize handwriting in PDFs or images?", a: "Yes, our OCR can detect handwritten text, though clarity affects accuracy." },
+              { q: "Are my uploaded files stored online?", a: "No, all files are processed locally and not uploaded anywhere." },
+              { q: "Can I use AI features without signing up?", a: "Yes, just set your VITE_GEMINI_API_KEY in your environment to access AI tools." },
+              { q: "Does it support languages other than English?", a: "Currently English and Hindi are supported, more can be added with Tesseract.js." },
+              { q: "How can I make my posts more engaging?", a: "Use AI tools like hashtags, summary, and sentiment analysis to optimize your content." }
+          ].map((item, i) => (
+            <div key={i} className="border rounded-lg bg-white/10 backdrop-blur-sm">
+              <button onClick={() => setFaqOpen(faqOpen === i ? null : i)} className="w-full flex justify-between items-center px-4 py-3 text-left font-medium">
+                <span>{item.q}</span>
+                <ChevronDown className={`transition-transform ${faqOpen === i ? "rotate-180" : ""}`} />
+              </button>
+              {faqOpen === i && <div className="px-4 pb-3 text-sm text-gray-700">{item.a}</div>}
+            </div>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* ---------- Footer ---------- */}
+      <footer className="text-center mt-12">
+        <div className="bg-white/20 backdrop-blur-md text-white py-6 rounded-2xl shadow-lg">
+          <h4 className="font-bold text-lg">🌐 Social Media Content Analyzer</h4>
+          <p className="text-sm opacity-80">Helping you extract, analyze & improve content</p>
+          <p className="mt-2 text-xs">© {new Date().getFullYear()} All Rights Reserved | Made with ❤️ by <b>Anubhav Tripathi</b></p>
+        </div>
+      </footer>
+    </main>
+  </div>
+);
 }
