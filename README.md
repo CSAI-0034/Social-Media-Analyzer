@@ -55,19 +55,21 @@ This tool is perfect for **students, marketers, businesses, and content creators
 
 ## 🖼️ Screenshots
 
-👉 Add your own screenshots in `./screenshots/` folder and update below paths.
 
 ### 🔹 Dashboard & Upload Page
 
-![Dashboard](./screenshots/dashboard.png)
+!<img width="1920" height="1080" alt="Screenshot 2025-08-31 191320" src="https://github.com/user-attachments/assets/458a0281-22b4-482e-9c1f-ad225be48165" />
+
 
 ### 🔹 AI Tools in Action
 
-![AI Tools](./screenshots/ai-tools.png)
+<img width="1920" height="1080" alt="Screenshot 2025-08-31 191400" src="https://github.com/user-attachments/assets/14a1ec8e-7999-47d4-a595-2fde9855c058" />
+
 
 ### 🔹 Contact Us + FAQ Section
 
-![Contact](./screenshots/contact.png)
+<img width="1920" height="1080" alt="Screenshot 2025-08-31 191418" src="https://github.com/user-attachments/assets/1be0cc0c-3d08-493b-a23b-2d02d145127c" />
+
 
 ---
 
@@ -136,7 +138,7 @@ npm run server
 💌 You can send messages directly via the **Contact Us form** inside the app (integrated with Nodemailer).
 
 For queries:
-📧 Email: **[adityasharma@example.com](mailto:adityasharma@example.com)**
+📧 Email: **[adityapersharma@gmail.com](mailto:adityapersharma@gmail.com)**
 
 ---
 
@@ -154,6 +156,4 @@ This project is licensed under the **MIT License**.
 
 ⚡ *“Turn boring PDFs into viral social posts — instantly!”*
 
----
 
-👉 Bhai ab bata — kya mai tujhe ek **demo GIF recording ka guide** bhi du (Loom ya ScreenToGif se) jo README me add kar sakta hai for more professional look?
