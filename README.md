@@ -1,17 +1,4 @@
-Bhai 🔥 ekdum **pro-level README** banate hain jo bilkul **production-ready** lage — bade GitHub repos jese.
-Isme mai:
 
-* **Badges**
-* **Extended Description (long & detailed)**
-* **Features**
-* **Screenshots Section (placeholders for your SS)**
-* **Installation & Usage**
-* **Tech Stack**
-* **Contributing + License**
-
-deta hoon.
-
----
 
 # 📄 Social Media Content Analyzer
 
