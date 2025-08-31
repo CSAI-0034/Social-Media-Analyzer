@@ -50,12 +50,13 @@ This tool is perfect for **students, marketers, businesses, and content creators
 
 ### 🔹 AI Tools in Action
 
-<img width="1920" height="1080" alt="Screenshot 2025-08-31 191400" src="https://github.com/user-attachments/assets/14a1ec8e-7999-47d4-a595-2fde9855c058" />
+<img width="1920" height="1080" alt="Screenshot 2025-08-31 191418" src="https://github.com/user-attachments/assets/1be0cc0c-3d08-493b-a23b-2d02d145127c" />
 
 
 ### 🔹 Contact Us + FAQ Section
 
-<img width="1920" height="1080" alt="Screenshot 2025-08-31 191418" src="https://github.com/user-attachments/assets/1be0cc0c-3d08-493b-a23b-2d02d145127c" />
+<img width="1920" height="1080" alt="Screenshot 2025-08-31 192247" src="https://github.com/user-attachments/assets/c5048272-f0df-405e-a5a4-32e3fb949fec" />
+
 
 
 ---
