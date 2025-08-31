@@ -9,6 +9,9 @@
     "preview": "vite preview",
     "server": "node server.js"
   },
+  "engines": {
+  "node": "18.x"
+  },
   "dependencies": {
     "express": "^4.19.2",
     "nodemailer": "^6.9.11",
