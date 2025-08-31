@@ -1,6 +1,4 @@
-
-
-# 📄 Social Media Content Analyzer
+# 🚀 Social Analyzer
 
 [![React](https://img.shields.io/badge/React-18-blue?logo=react)](https://reactjs.org/)
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.0-38B2AC?logo=tailwindcss)](https://tailwindcss.com/)
@@ -10,54 +8,70 @@
 
 ---
 
-## 📝 Overview
+## 🌟 What is Social Analyzer?
 
-**Social Media Content Analyzer** is a full-stack, AI-powered web application that **extracts text from PDFs and Images** and transforms it into engaging, ready-to-post social media content.
+**Social Analyzer** is a modern, AI-driven web app designed to help you turn PDFs and images into compelling, ready-to-share social media content in just a few clicks.
 
-Built with **React.js (frontend)** and **Node.js + Express (backend)**, it integrates **OCR (PDF.js + Tesseract.js)** for text extraction and **Google Gemini AI** for advanced content generation like **summarization, rewriting, hashtags, sentiment analysis, and engagement tips**.
+Built with a robust **React.js** frontend and a powerful **Node.js/Express** backend, it leverages **PDF.js** and **Tesseract.js** for OCR, and integrates **Google Gemini AI** for advanced content transformation—summaries, hashtags, sentiment, and more.
 
-This tool is perfect for **students, marketers, businesses, and content creators** who want to save time and directly create optimized content from documents.
-
----
-
-## ✨ Key Features
-
-✔️ Upload PDFs / Images with hybrid OCR (text + scanned support)
-✔️ Extract text using **PDF.js + Tesseract.js**
-✔️ **AI-Powered Tools (Gemini AI)**:
-
-* 📝 Summarization (5 bullet points)
-* 🔖 Hashtags Generator
-* 📊 Sentiment Analysis
-* 🚀 Engagement Improvement Suggestions
-* 💼 LinkedIn-Style Rewriting
-  ✔️ **Theme Switcher** → Light 🌞 | Dark 🌙 | Gradient 🌈
-  ✔️ **Dashboard-Style UI** inspired by PDF2Go
-  ✔️ Step-by-Step **How to Use Guide**
-  ✔️ **FAQ Section** for user clarity
-  ✔️ **Contact Us Form** → integrated with backend via **Nodemailer**
-  ✔️ Smooth **animations & responsive design** for mobile & desktop
+Whether you’re a student, marketer, business owner, or content creator, Social Analyzer streamlines your workflow and helps you craft optimized posts directly from your documents.
 
 ---
 
-## ⚙️ Installation
+## 🔑 Features at a Glance
 
-### 1. Clone Repository
+- **Upload PDFs or Images** (supports both text and scanned files)
+- **Hybrid OCR**: Extracts text using PDF.js & Tesseract.js
+- **AI Content Tools** (powered by Gemini):
+  - Summarize content (5 key points)
+  - Generate relevant hashtags
+  - Analyze sentiment
+  - Suggest ways to boost engagement
+  - Rewrite for LinkedIn-style posts
+- **Modern UI**:
+  - Light, Dark, and Gradient themes
+  - Dashboard-inspired layout (PDF2Go style)
+  - Step-by-step usage guide
+  - FAQ section for quick help
+  - Contact form (integrated with Nodemailer)
+  - Responsive design & smooth animations
+
+---
+
+## 🖼️ Preview
+
+### Dashboard & Upload
+
+<img width="1920" height="1080" alt="Dashboard Screenshot" src="https://github.com/user-attachments/assets/458a0281-22b4-482e-9c1f-ad225be48165" />
+
+### AI Tools in Action
+
+<img width="1920" height="1080" alt="AI Tools Screenshot" src="https://github.com/user-attachments/assets/1be0cc0c-3d08-493b-a23b-2d02d145127c" />
+
+### Contact & FAQ
+
+<img width="1920" height="1080" alt="Contact Screenshot" src="https://github.com/user-attachments/assets/c5048272-f0df-405e-a5a4-32e3fb949fec" />
+
+---
+
+## ⚙️ Getting Started
+
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/CSAI-0034/social-analyzer.git
+git clone https://github.com/AdityaSharma1305/social-analyzer.git
 cd social-analyzer
 ```
 
-### 2. Install Dependencies
+### 2. Install Project Dependencies
 
 ```bash
 npm install
 ```
 
-### 3. Setup Environment Variables
+### 3. Configure Environment Variables
 
-Create a `.env` file in the root folder:
+Create a `.env` file in the root directory:
 
 ```env
 VITE_GEMINI_API_KEY=your_gemini_api_key_here
@@ -65,15 +79,15 @@ EMAIL_USER=your_gmail@gmail.com
 EMAIL_PASS=your_app_password_here
 ```
 
-### 4. Start Development Servers
+### 4. Run the Application
 
-Frontend (Vite):
+Start the frontend (Vite):
 
 ```bash
 npm run dev
 ```
 
-Backend (Express):
+Start the backend (Express):
 
 ```bash
 npm run server
@@ -81,37 +95,43 @@ npm run server
 
 ---
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 
-* **Frontend** → React.js, TailwindCSS, Framer Motion
-* **Backend** → Node.js, Express, Nodemailer
-* **OCR** → PDF.js, Tesseract.js
-* **AI** → Google Gemini API
-* **Deployment** → Vercel (Frontend), Render/Heroku (Backend)
+- **Frontend:** React.js, TailwindCSS, Framer Motion
+- **Backend:** Node.js, Express, Nodemailer
+- **OCR:** PDF.js, Tesseract.js
+- **AI:** Google Gemini API
+- **Deployment:** Vercel (Frontend), Render/Heroku (Backend)
 
 ---
 
-## 📌 Usage Workflow
+## 🚦 How It Works
 
-1️⃣ **Upload File** → PDF or Image
-2️⃣ **Extract Text** → Hybrid OCR ensures both text & scanned PDFs work
-3️⃣ **Run AI Tools** → Summarize, Hashtags, Sentiment, Engagement, Rewrite
-4️⃣ **Copy/Download** → Directly export optimized text for social media
+1. **Upload** your PDF or image file.
+2. **Extract** text using hybrid OCR (works for both digital and scanned files).
+3. **Apply AI Tools**: Summarize, generate hashtags, analyze sentiment, get engagement tips, or rewrite for LinkedIn.
+4. **Copy or Download** your optimized social media content.
+
+---
+
+## 📬 Contact & Support
+
+Have questions or feedback? Use the in-app **Contact Us** form (powered by Nodemailer), or email:
+
+📧 [adityapersharma@gmail.com](mailto:adityapersharma@gmail.com)
 
 ---
 
 ## 🤝 Contributing
 
-Pull requests are welcome! For major changes, open an issue first to discuss what you’d like to change.
+Contributions are welcome! Please open an issue to discuss your ideas or submit a pull request.
 
 ---
 
-## 📜 License
+## 📄 License
 
-This project is licensed under the **MIT License**.
+Licensed under the [MIT License](LICENSE).
 
 ---
 
-⚡ *“Turn boring PDFs into viral social posts — instantly!”*
-
-
+> **Transform your documents into viral
