@@ -40,33 +40,12 @@ This tool is perfect for **students, marketers, businesses, and content creators
 
 ---
 
-## 🖼️ Screenshots
-
-
-### 🔹 Dashboard & Upload Page
-
-!<img width="1920" height="1080" alt="Screenshot 2025-08-31 191320" src="https://github.com/user-attachments/assets/458a0281-22b4-482e-9c1f-ad225be48165" />
-
-
-### 🔹 AI Tools in Action
-
-<img width="1920" height="1080" alt="Screenshot 2025-08-31 191418" src="https://github.com/user-attachments/assets/1be0cc0c-3d08-493b-a23b-2d02d145127c" />
-
-
-### 🔹 Contact Us + FAQ Section
-
-<img width="1920" height="1080" alt="Screenshot 2025-08-31 192247" src="https://github.com/user-attachments/assets/c5048272-f0df-405e-a5a4-32e3fb949fec" />
-
-
-
----
-
 ## ⚙️ Installation
 
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/AdityaSharma1305/social-analyzer.git
+git clone https://github.com/CSAI-0034/social-analyzer.git
 cd social-analyzer
 ```
 
@@ -126,7 +105,7 @@ npm run server
 💌 You can send messages directly via the **Contact Us form** inside the app (integrated with Nodemailer).
 
 For queries:
-📧 Email: **[adityapersharma@gmail.com](mailto:adityapersharma@gmail.com)**
+📧 Email: **[adityapersharma@gmail.com](mailto:anubhavtripathi512.com)**
 
 ---
 
