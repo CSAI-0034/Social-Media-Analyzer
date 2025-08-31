@@ -1,4 +1,4 @@
-# 🚀 Social Analyzer
+# 🚀 Social Media Content Analyzer
 
 [![React](https://img.shields.io/badge/React-18-blue?logo=react)](https://reactjs.org/)
 [![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.0-38B2AC?logo=tailwindcss)](https://tailwindcss.com/)
@@ -8,9 +8,9 @@
 
 ---
 
-## 🌟 What is Social Analyzer?
+## 🌟 What is Social Media Content Analyzer?
 
-**Social Analyzer** is a modern, AI-driven web app designed to help you turn PDFs and images into compelling, ready-to-share social media content in just a few clicks.
+**Social Media Content Analyzer** is a modern, AI-driven web app designed to help you turn PDFs and images into compelling, ready-to-share social media content in just a few clicks.
 
 Built with a robust **React.js** frontend and a powerful **Node.js/Express** backend, it leverages **PDF.js** and **Tesseract.js** for OCR, and integrates **Google Gemini AI** for advanced content transformation—summaries, hashtags, sentiment, and more.
 
